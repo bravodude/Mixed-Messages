@@ -19,7 +19,7 @@ let v1 = pronounArray[randomPronoun];
 let v2 = verbArray[randomVerb];
 let v3 = nounArray[randomNoun];
 
-return `${v1} was ${v2} about the ${v3}.`;
+return `${v1} was ${v2} about ${v3}.`;
 };
 
-console.log(randomMessage())
+console.log(randomMessage());
