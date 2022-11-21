@@ -7,23 +7,19 @@ let nounArray = ["basketball", "game", "score", "team", "life"];
 
 //create randomizer that selects a random index from array
 
-let randomPronoun = (array) => {
-    let num = Math.floor(Math.random() * array.length) + 1;
-    return num;
+let randomPronoun = Math.floor(Math.random() * pronounArray.length);
+let randomVerb = Math.floor(Math.random() * verbArray.length);
+let randomNoun = Math.floor(Math.random() * nounArray.length);
+
+//console log the random index into text
+
+let randomMessage = () => {
+
+let v1 = pronounArray[randomPronoun];
+let v2 = verbArray[randomVerb];
+let v3 = nounArray[randomNoun];
+
+return `${v1} was ${v2} about the ${v3}.`;
 };
 
-let randomVerb = (array) => {
-    let num = Math.floor(Math.random() * array.length) + 1;
-    return num;
-};
-
-let randomNoun = (array) => {
-    let num = Math.floor(Math.random() * array.length) + 1;
-    return num;
-};
-
-
-console.log(randomPronoun(pronounArray));
-console.log(randomVerb(verbArray));
-console.log(randomVerb(nounArray));
-
+console.log(randomMessage())
