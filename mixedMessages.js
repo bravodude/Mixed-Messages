@@ -1,25 +1,27 @@
 //create 3 arrays that will hold different options
 
-let pronounArray = ["He", "She"];
-let verbArray = ["excited", "sad", "happy", "crying", "yelling", "laughing"];
-let nounArray = ["basketball", "game", "score", "team", "life"];
-
+let subject = ["football", "basketball", "soccer", "tennis", "hockey", "golf", "tournament"];
+let day = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+let hour = ["10:00", "11:00", "12:00", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00"];
+let amPM = ["am", "pm"];
 
 //create randomizer that selects a random index from array
 
-let randomPronoun = Math.floor(Math.random() * pronounArray.length);
-let randomVerb = Math.floor(Math.random() * verbArray.length);
-let randomNoun = Math.floor(Math.random() * nounArray.length);
+let randomSubject = Math.floor(Math.random() * subject.length);
+let randomDay = Math.floor(Math.random() * day.length);
+let randomHour = Math.floor(Math.random() * hour.length);
+let randomAmPm = Math.floor(Math.random() * amPM.length);
 
 //console log the random index into text
 
 let randomMessage = () => {
 
-let v1 = pronounArray[randomPronoun];
-let v2 = verbArray[randomVerb];
-let v3 = nounArray[randomNoun];
+let v1 = subject[randomSubject];
+let v2 = day[randomDay];
+let v3 = hour[randomHour];
+let v4 = amPM[randomAmPm];
 
-return `${v1} was ${v2} about ${v3}.`;
+return `You have a ${v1} game on ${v2} at ${v3} ${v4}.`;
 };
 
 console.log(randomMessage());
